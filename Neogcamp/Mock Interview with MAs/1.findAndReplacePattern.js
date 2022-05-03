@@ -65,4 +65,4 @@ const replacePatternInArray = (originalArray, patternArray, replacementArray) =>
     return newArray
 }
 
-console.log(replacePatternInArray(["a","b","x","y","h"],["b","x"],["p","q","r"]))
+console.log(replacePatternInArray(["a","b","x","y","h","b","x","z","g"],["b","x"],["p","q","r"]))
