@@ -10,7 +10,7 @@ function merge(left, right) {
   return [...arr, ...left, ...right];
 }
 
-const mergeSortArray = (inputArray) => {
+const mergeSort = (inputArray) => {
   const half = inputArray.length / 2;
 
   if (inputArray.length < 2) {
@@ -18,7 +18,8 @@ const mergeSortArray = (inputArray) => {
   }
 
   const left = inputArray.splice(0, half);
-  return merge(mergeSortArray(left), mergeSortArray(inputArray));
+  return merge(mergeSort(left), mergeSort(inputArray));
 };
 
-console.log(mergeSortArray([69, 865, 420, 32, 3, 50]));
+let arrayToSort = [69, 1020, 865, 420, 32, 3]
+console.log(mergeSort(arrayToSort));

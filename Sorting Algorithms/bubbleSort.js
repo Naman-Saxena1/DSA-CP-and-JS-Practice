@@ -1,4 +1,4 @@
-const bubbleSortArray = (inputUnsortedArray) => {
+const bubbleSort = (inputUnsortedArray) => {
 
     for(let i=0 ; i<inputUnsortedArray.length-1 ; i++)
     {
@@ -15,4 +15,5 @@ const bubbleSortArray = (inputUnsortedArray) => {
     return inputUnsortedArray
 }
 
-console.log(bubbleSortArray([69, 865, 420, 32, 3, 50]));
+let arrayToSort = [69, 1020, 865, 420, 32, 3]
+console.log(bubbleSort(arrayToSort));
