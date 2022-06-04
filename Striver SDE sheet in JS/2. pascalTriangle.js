@@ -95,12 +95,15 @@ const generatePascalTriangleNthRow = (rowNumber) =>
     // nC0 = 1
     let prev = 1;
  
-    for(let i = 1; i <= rowNumber; i++)
-    {   
-        // nCr = (nCr-1 * (n - r + 1))/r
-        let curr = (prev * (rowNumber - i + 1)) / i;
-        pascalTriangleRow.push(curr)
-        prev = curr;
+    if(rowNumber!==1)
+    {
+        for(let i = 1; i <= rowNumber-1; i++)
+        {   
+            // nCr = (nCr-1 * (n - r + 1))/r
+            let curr = (prev * (rowNumber - i)) / i;
+            pascalTriangleRow.push(curr)
+            prev = curr;
+        }
     }
     // Time complexity = O(n) 
     // Space complexity = O(n)
@@ -108,4 +111,4 @@ const generatePascalTriangleNthRow = (rowNumber) =>
     return pascalTriangleRow
 }
 
-console.log(generatePascalTriangleNthRow(4))
+console.log(generatePascalTriangleNthRow(5))

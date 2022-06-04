@@ -1,14 +1,14 @@
-const rotate2DArray90Degree = (inputArray) => {
-    for (let i = 0; i < inputArray.length; i++) {
+const rotate2DArray90Degree = (matrix) => {
+    for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < i; j++) {
-        let swapVar = inputArray[i][j];
-        inputArray[i][j] = inputArray[j][i];
-        inputArray[j][i] = swapVar;
+        let swapVar = matrix[i][j];
+        matrix[i][j] = matrix[j][i];
+        matrix[j][i] = swapVar;
       }
     }
   
-    inputArray.forEach((rowArray) => rowArray.reverse());
-    return inputArray;
+    matrix.forEach((rowArray) => rowArray.reverse());
+    return matrix;
 };
 
 console.log(

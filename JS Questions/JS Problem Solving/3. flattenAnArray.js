@@ -28,4 +28,7 @@ function flatFunc(originalArray,depth=1) {
 //   )
 // };
 
+// Method 3 - Only 1 depth
+// let flattenedArray = [].concat(...arr1)
+
 console.log(flatFunc(arr1,2))
