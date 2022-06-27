@@ -110,6 +110,8 @@ var uniquePaths = function(m, n) {
     {
         result = result *(N-r+i)/i
     }
+    // Time complexity - O(m-1) or O(n-1) whichever is smaller
+    // Space complexity - O(1)
 
     return result
 }

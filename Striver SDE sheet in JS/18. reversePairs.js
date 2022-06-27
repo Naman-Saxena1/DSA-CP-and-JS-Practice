@@ -92,6 +92,12 @@ var reversePairs2 = function(nums) {
         return merge(mergeSort(left), mergeSort(inputArr))
     }
     mergeSort(nums)
+    // Time complexity - O(nlogn) + O(n) + O(n)
+    // O(n logn) - For merge sort
+    // O(n) - For merge
+    // O(n) - For counting operation
+    // Space complexity - O(n)
+
     return count
 };
 
